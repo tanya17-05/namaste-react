@@ -1,0 +1,18 @@
+npx parcel (index.html) [entry point of app]
+
+npm -> install
+npx -> execute
+
+CDN links are not ideal way to inject code bcoz:
+    1. api calls are costly
+    2. become dependent to avaliablity of CDN servers
+    3. easy to manage (to update you dont have to change urls)
+
+browser scripts cannot have imports and exports
+
+Importing createRoot from "react-dom" which is not supported. You should instead import it from "react-dom/client".
+
+Parcel provides HMR (Hot Module `Replacement`)
+Parcel (bundlers) makes fast react to be superfast
+
+"main": "App.js" -> remove this line from package.json as we are proving entry point in terminal (as index.html), parcel may conflict with this
